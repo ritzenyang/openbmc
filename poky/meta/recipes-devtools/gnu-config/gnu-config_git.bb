@@ -11,7 +11,7 @@ INHIBIT_DEFAULT_DEPS = "1"
 SRCREV = "664b772118739dac69ef8c39abea7e02973ff316"
 PV = "20201018+git${SRCPV}"
 
-SRC_URI = "git://git.savannah.gnu.org/config.git \
+SRC_URI = "git://git.savannah.gnu.org/git/config.git;protocol=https \
            file://gnu-configize.in"
 S = "${WORKDIR}/git"
 UPSTREAM_CHECK_COMMITS = "1"

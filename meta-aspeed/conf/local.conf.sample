@@ -1,5 +1,6 @@
 #MACHINE ?= "evb-ast2500"
-MACHINE ??= "evb-ast2600"
-
+#MACHINE ??= "evb-ast2600"
+MACHINE ??= "ast2600evb"
+DISTRO ?= "openbmc-ast2600evb
 # Allow logging in if the user does not set the root password.
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"

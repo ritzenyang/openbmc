@@ -1,0 +1,2 @@
+ast2600evb:
+DISTRO=openbmc-ast2600evb MACHINE=ast2600evb bitbake obmc-phosphor-image

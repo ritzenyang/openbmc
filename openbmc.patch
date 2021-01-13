@@ -1,0 +1,77 @@
+diff --git a/poky/meta/recipes-devtools/gnu-config/gnu-config_git.bb b/poky/meta/recipes-devtools/gnu-config/gnu-config_git.bb
+index 200b1f185..ab47aca8c 100644
+--- a/poky/meta/recipes-devtools/gnu-config/gnu-config_git.bb
++++ b/poky/meta/recipes-devtools/gnu-config/gnu-config_git.bb
+@@ -11,7 +11,7 @@ INHIBIT_DEFAULT_DEPS = "1"
+ SRCREV = "2593751ef276497e312d7c4ce7fd049614c7bf80"
+ PV = "20200721+git${SRCPV}"
+ 
+-SRC_URI = "git://git.savannah.gnu.org/config.git \
++SRC_URI = "git://git.savannah.gnu.org/git/config.git;protocol=https \
+            file://gnu-configize.in"
+ S = "${WORKDIR}/git"
+ UPSTREAM_CHECK_COMMITS = "1"
+diff --git a/poky/meta/recipes-devtools/mtd/mtd-utils_git.bb b/poky/meta/recipes-devtools/mtd/mtd-utils_git.bb
+index 918141342..745519701 100644
+--- a/poky/meta/recipes-devtools/mtd/mtd-utils_git.bb
++++ b/poky/meta/recipes-devtools/mtd/mtd-utils_git.bb
+@@ -13,7 +13,7 @@ RDEPENDS_mtd-utils-tests += "bash"
+ PV = "2.1.2"
+ 
+ SRCREV = "7b986779342021bda87c04da3bf729718736d8ab"
+-SRC_URI = "git://git.infradead.org/mtd-utils.git \
++SRC_URI = "git://github.com/sigma-star/mtd-utils.git \
+            file://add-exclusion-to-mkfs-jffs2-git-2.patch \
+            "
+ 
+diff --git a/poky/meta/recipes-devtools/opkg/opkg_0.4.3.bb b/poky/meta/recipes-devtools/opkg/opkg_0.4.3.bb
+index 46b7aa252..6c18aa5eb 100644
+--- a/poky/meta/recipes-devtools/opkg/opkg_0.4.3.bb
++++ b/poky/meta/recipes-devtools/opkg/opkg_0.4.3.bb
+@@ -11,7 +11,7 @@ DEPENDS = "libarchive"
+ 
+ PE = "1"
+ 
+-SRC_URI = "http://downloads.yoctoproject.org/releases/${BPN}/${BPN}-${PV}.tar.gz \
++SRC_URI = "https://sources.voidlinux.org/opkg-0.4.3/${BPN}-${PV}.tar.gz \
+            file://opkg.conf \
+            file://0001-opkg_conf-create-opkg.lock-in-run-instead-of-var-run.patch \
+            file://run-ptest \
+diff --git a/poky/meta/recipes-devtools/prelink/prelink_git.bb b/poky/meta/recipes-devtools/prelink/prelink_git.bb
+index e197af9ee..b5949fd0d 100644
+--- a/poky/meta/recipes-devtools/prelink/prelink_git.bb
++++ b/poky/meta/recipes-devtools/prelink/prelink_git.bb
+@@ -27,7 +27,7 @@ FILES_${PN}-cron = "${sysconfdir}/cron.daily ${sysconfdir}/default"
+ 
+ PACKAGES =+ "${PN}-cron"
+ 
+-SRC_URI = "git://git.yoctoproject.org/prelink-cross.git;branch=cross_prelink_staging \
++SRC_URI = "git://git.yoctoproject.org/git/prelink-cross.git;branch=cross_prelink_staging;protocol=https \
+            file://0001-Add-MIPS-gnu-hash-support.patch \
+            file://prelink.conf \
+            file://prelink.cron.daily \
+diff --git a/poky/meta/recipes-devtools/pseudo/pseudo_git.bb b/poky/meta/recipes-devtools/pseudo/pseudo_git.bb
+index 9a22304bb..6588bf956 100644
+--- a/poky/meta/recipes-devtools/pseudo/pseudo_git.bb
++++ b/poky/meta/recipes-devtools/pseudo/pseudo_git.bb
+@@ -1,6 +1,6 @@
+ require pseudo.inc
+ 
+-SRC_URI = "git://git.yoctoproject.org/pseudo;branch=oe-core \
++SRC_URI = "git://git.yoctoproject.org/git/pseudo;branch=oe-core;protocol=https \
+            file://0001-configure-Prune-PIE-flags.patch \
+            file://fallback-passwd \
+            file://fallback-group \
+diff --git a/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb b/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb
+index ea33732a3..e388111cc 100644
+--- a/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb
++++ b/poky/meta/recipes-kernel/kern-tools/kern-tools-native_git.bb
+@@ -10,7 +10,7 @@ PV = "0.2+git${SRCPV}"
+ 
+ inherit native
+ 
+-SRC_URI = "git://git.yoctoproject.org/yocto-kernel-tools.git"
++SRC_URI = "git://git.yoctoproject.org/git/yocto-kernel-tools.git;protocol=https"
+ S = "${WORKDIR}/git"
+ UPSTREAM_CHECK_COMMITS = "1"
+ 
